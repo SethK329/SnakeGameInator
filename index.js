@@ -16,6 +16,7 @@ const buttonContainer = document.getElementById('buttonContainer')
 
 // event listeners
 // adjust direction but no backtracking with buttons
+startGameBtn.addEventListener('click', startGame)
 buttonContainer.addEventListener('click', (e) => {
     if(e.target.id === "up" && direction !== "down"){
         direction = "up"
@@ -25,10 +26,8 @@ buttonContainer.addEventListener('click', (e) => {
         direction = "left"
     }else if(e.target.id === "right" && direction !== "left"){
         direction = "right"
-    }else if(e.target.id === "startGame"){
-        startGame()
-    }
-})
+    }}
+)
 
 // add event listener for keyboard, changes direction not backtracking
 document.addEventListener('keydown', (e) => {
