@@ -81,18 +81,20 @@ const renderBoard = () => {
 
   function renderGameElements(){
         const allGridElems = document.querySelectorAll('.grid-space')
-        allGridElems[appleLocation].classList.add("apple");
         snake.forEach((s) => {
-        allGridElems[s].classList.add("snaky");
-      });
+            allGridElems[s].classList.add("snaky");
+        });
+        allGridElems[appleLocation].classList.add("apple");
 
   }
 
   function setApple(){
-    const randomNum = Math.floor(Math.random() * size*size)
+    const randomNum = Math.floor(Math.random() * (size*size))
     if(snake.includes(randomNum)){
-        setApple()
+        console.log("snake")
+       return setApple()
     }else{
+        console.log(randomNum)
         return randomNum
     }
   }
@@ -127,6 +129,7 @@ const renderBoard = () => {
         // check if snake eats apple then generate new apple, add points and add snake length
         if(nextMove === appleLocation){
             appleLocation = setApple()
+            console.log(`Apple:${appleLocation}`)
             pts++
             points.innerText = pts
             snake.unshift(snake[0])
