@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 95dvh;
+    width: 95dvw;
+    font-size: 1.25rem;
+    color: #0f0f0f;
+    text-align: center;
+    margin: .5rem;
+    background-image: 
+    radial-gradient(
+      farthest-corner circle at 50% 50% in oklab,
+      oklch(95% 0.01 256) 0%, 69%, oklch(90% 0.05 205) 100% 87%
+    )
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    gap: 1.25rem;
+}
+
+#grid {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid-space {
+    border: 1px solid grey;
+    width: 20px;
+    height: 20px;
+  }
+
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .button-container button {
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    background-color: oklch(95% .02 100);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .snaky {
+    border: none;
+    background-image: 
+    radial-gradient(
+      farthest-corner circle at 50% 50% in oklab,
+      oklch(55% 0.45 32) 0%, oklch(20% 0.45 32) 100%
+    );
+  }
+  
+  .apple {
+    scale: .9;
+    background-image: 
+    radial-gradient(
+      farthest-corner circle at 50% 50% in oklab,
+      oklch(55% 0.45 144) 0%, oklch(47% 0.45 139) 100%
+    ); 
+    border-radius: 4px 4px 8px 8px;
+  }
+
+  .game-over {
+    color: black;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+    border: solid 2px black;
+    background-color: oklch(95% .02 100);
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>   
+    <main>
+        <h1>Snake Game</h1>
+        <p>PTS: <span id="pts">0</span></p>
+        <select name="difficulty" id="difficulty" value = "10">
+            <option value="10">Hard</option>
+            <option value="14">Medium</option>
+            <option value="18">Easy</option>
+        </select>
+        <div id="grid">
+        </div>
+        <p>Use the arrow keys to move
+            <br>
+            or the buttons below.
+            <br>
+            Enter to start
+        </p>
+        <div id="buttonContainer" class="button-container">
+            <button id="up">Up</button>
+            <button id="down">Down</button>
+            <button id="left">Left</button>
+            <button id="right">Right</button>
+            <button id="startGame">Start Game</button>   
+        </div>
+    </main>    
+    <script src="index.js"></script>
+</body>
+</html>
