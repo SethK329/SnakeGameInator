@@ -41,20 +41,27 @@ main{
   }
 
   .button-container {
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 10px;
   }
 
-  .button-container button {
+  .button-container button,
+  #startGame {
     padding: .5rem 1rem;
     border-radius: 4px;
     background-color: oklch(95% .02 100);
     font-weight: bold;
     font-size: 1rem;
+  }
+
+  .stacked-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .snaky {
@@ -89,3 +96,5 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+ 
